@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grechen+Fuemen&family=Lilita+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+Hanunoo&family=Pacifico&family=Permanent+Marker&family=Piedra&family=Rubik+Vinyl&display=swap');
+:root{
+    --prime:#ffffff;
+    --sec:navy;
+    --shado:0 0 10px black;
+    --box:red;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.block1{
+    animation: left-side linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35% ;
+}
+@keyframes left-side {
+    from{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.block{
+    animation: moves linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35% ;
+}
+@keyframes moves {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.logo > h2{
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+nav{
+    background-color: var(--sec);
+    color: var(--prime);
+    padding: 20px;
+    min-height: 13vh;
+    position: fixed !important;
+    width: 100%;
+    z-index: 999;
+}
+.link-co{
+    display: flex;
+    gap: 20px;
+}
+.link-co > label 
+,.link-co > input{
+    display: none;
+}
+.links{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.links a{
+    text-decoration: none;
+    color: var(--prime);
+    font-size: 1.2rem;
+    scroll-behavior: smooth;
+    padding: 1px 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.links a:hover{
+    transition: all 1s;
+    background-color: var(--prime);
+    color:navy;
+}
+.links a::before{
+    content: "";
+    width: 0%;
+    position: absolute;
+    background-color: white;
+    height: 4px;
+    bottom: -10px;
+    left: 35px;
+}
+.links a:hover::before{
+    width: 100%;
+    transition: all 0.6s;
+    left: 0;
+}
+/* check box */
+input:checked~.links{
+    right: 0;
+    top: 60px;
+    opacity: 0.7;
+    transition: all 1s;
+    transform: rotate(0deg);
+}
+/* header */
+header{
+    min-height: 80vh;
+    background:center url(../images/bike-s2.jpg) ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--box);
+    opacity: 0.8;
+    text-align: center;
+}
+header > .h-txt > h1{
+    font-size: 4rem;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.h-txt > h4 > a{
+    text-decoration: none;
+    color: white;
+}
+.h-txt > h4 > a:hover{
+     color: red;
+}
+.h-txt > h4 > a::after {
+    content: ">>";
+}
+.h-txt > h4 > span::after{
+    content: "..!";
+}
+/* contact */
+.contact{
+    min-height: 70vh;
+    padding: 20px;
+}
+.contact > .c-cover{
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 70vh;
+}
+.c-cover > div{
+    width: 45%;
+    height:500px;
+}
+.quest{
+    background-color:var(--sec) !important;
+    color: var(--prime);
+}
+form > input{
+   margin: 20px 0px !important;   
+}
+form > .btn{
+    margin: 20px 0px !important ;
+    background-color: red;
+    text-transform: capitalize;
+    font-weight: bold
+}
+.block2{
+    animation: up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+}
+@keyframes up {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+/* about up */
+header > .up{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:black;
+    font-size: 30px;
+    display: grid;
+    place-content: center;
+    position:fixed;
+    z-index: 1;
+    right:20px;
+    bottom:20px;
+}
+.up > a{
+  color: var(--box);
+}
+/* footer */
+footer{
+    background:rgb(21, 20, 20);
+    min-height: 30vh;
+    color: var(--prime);
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+footer > .end{
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   padding: 10px;
+}
+.end > .e-box{
+   width:30%;
+   display: grid;
+   place-content: center;
+}
+.e-box > h3{
+    color: var(--box);
+}
+.e-icon{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.e-icon > i{
+    margin: 10px 0;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.e-icon >i:hover{
+    color: var(--box);
+    text-shadow: 0 0 20px red;
+}
+.e-box1 > a{
+   text-decoration: none;
+   margin: 5px 0;
+   color: white;
+}
+.e-box1 > a:hover{
+    color: var(--box);
+}
+.e-box3 > p > i{
+    margin-right:5px;
+    font-size: 25px;
+}
+.e-box3 >p:hover{
+    text-decoration: underline;
+    color: var(--box);
+}
+@media only screen and (max-width: 700px){
+    .link-co > label 
+    {
+        font-size: 2rem;
+        display: block;
+    }
+    /* navbar for the mobile */
+    .links{
+        flex-direction: column;
+        position: fixed;
+        top: -240px;
+        right: -200px;
+        height: 50vh;
+        background-color: var(--sec);
+        width:50% ;
+        transform: rotatex(60deg);
+        opacity: 0;
+    }
+       /* faq */
+       .contact{
+        padding: 20px;
+    }
+    .c-cover > div{
+        width: 100%;
+    }
+     /* footer */
+     footer >  .end{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 70px;
+    }
+    .end > .e-box{
+        width: 100%;
+       place-content: start;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width:700px){
+        /* footer */
+    footer > .end{
+        gap: 30px;
+    }
+    .end > .e-box{
+        width: 40%;
+    }
+    .e-icon > i{
+        font-size:30px ;
+    }
+}

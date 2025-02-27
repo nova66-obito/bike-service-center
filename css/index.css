@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grechen+Fuemen&family=Lilita+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+Hanunoo&family=Pacifico&family=Permanent+Marker&family=Piedra&family=Rubik+Vinyl&display=swap');
+:root{
+    --prime:rgb(245, 242, 242);
+    --sec:navy;
+    --shado:0 0 10px black;
+    --box:rgb(250, 40, 40);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.block2{
+    animation: up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+}
+@keyframes up {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.block1{
+    animation: left-side linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35% ;
+}
+@keyframes left-side {
+    from{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.block{
+    animation: moves linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35% ;
+}
+@keyframes moves {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.logo > h2{
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+nav{
+    background-color: var(--sec);
+    color: var(--prime);
+    padding: 30px;
+    min-height: 10vh;
+    position: fixed !important;
+    width: 100%;
+    z-index: 999;
+}
+.link-co{
+    display: flex;
+    gap: 20px;
+}
+.link-co > label 
+,.link-co > input{
+    display: none;
+}
+.links{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.links a{
+    text-decoration: none;
+    color: var(--prime);
+    font-size: 1.2rem;
+    font-family: "Ranchers", serif;
+    font-weight: 600;
+    font-style: normal;
+    scroll-behavior: smooth;
+    padding: 1px 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.links a:hover{
+    transition: all 0.8s;
+    background-color:var(--prime);
+}
+.links a::before{
+    content: "";
+    width: 0%;
+    position: absolute;
+    background-color: white;
+    height: 4px;
+    bottom: -10px;
+    left: 35px;
+}
+.links a:hover::before{
+    width: 100%;
+    transition: all 0.6s;
+    left: 0;
+}
+/* check box */
+input:checked~.links{
+    right: 0;
+    top: 60px;
+    opacity: 0.7;
+    transition: all 1s;
+    transform: rotate(0deg);
+}
+/* home */
+.home{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 70px;
+    min-height: 100vh;
+}
+.vid{
+  background-color: black;
+  height: 600px;
+}
+video{
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit:cover;
+}
+.home > .vid-txt{
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    text-align: center;
+    padding: 40px;
+    color: var(--prime);
+    font-size: 30px;
+    animation: txt 2s 1 forwards;
+}
+@keyframes txt{
+    from{
+        opacity: 0;
+        scale: 0.1;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.vid-txt > h1{
+    font-size: 50px;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 1px red;
+}
+
+/* about */
+.about{
+  min-height: 100vh;
+  background-color: var(--prime);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about > div{
+    width: 45%;
+}
+.about > .a-text{
+   padding: 50px;
+   position: relative;
+}
+.a-text > h1{
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    color: var(--box);
+    margin: 10px 0;
+}
+.a-text > h1::after{
+   content: "..!";
+}
+.a-text > h1::before{
+    content: "";
+    width: 40%;
+    height: 5px;
+    background-color:black;
+    position: absolute;
+    bottom: -10px;
+    left:30%;
+ }
+ 
+.a-text > button{
+    padding: 10px 20px;
+    border: 1px solid red;
+    border-radius: 20px 0px ;
+    box-shadow:1px 4px black;
+    background-color:var(--sec);
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+/* a.img */
+.a-img > img{
+    height: fit-content;
+    animation: a-rot infinite 3s;
+    filter: drop-shadow(0 10px black);
+}
+@keyframes a-rot{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        transform: rotatey(-180deg);
+    }
+
+}
+.a-img > h3{
+    font-size: 30px;
+    margin-top: -40px;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 3px 4px 5px blue;
+}
+ /* about up */
+ .about > .up{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:black;
+    font-size: 30px;
+    display: grid;
+    place-content: center;
+    position:fixed;
+    z-index: 1;
+    right:20px;
+    bottom:20px;
+}
+.up > a{
+  color: var(--box);
+}
+/* services*/
+.team{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: center url(https://images.unsplash.com/photo-1577801622187-9a1076d049da?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.team > h1{
+    margin-bottom: 50px;
+    color: var(--box);
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.team > h1::before{
+    content: "---";
+}
+.team > h1::after{
+    content: "---";
+}
+.t-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+.t-box > .box{
+    width:400px;
+    min-height: 300px;
+    padding: 30px;
+    background-color:whitesmoke;
+    border-radius: 0px 0px 100px 100px;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    color: var(--sec);
+}
+.box:before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    /* border-radius of pseudo element */
+    border-bottom-left-radius: 50%;
+    /* box shadow to give the shadow of the pseudo-element the same color as the background */
+    box-shadow: 0 20px 0 0 whitesmoke;
+  }
+  .box::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    /* border-radius of pseudo element */
+    border-bottom-right-radius: 50%;
+    /* box shadow to give the shadow of the pseudo-element the same color as the background */
+    box-shadow: 0 20px 0 0 whitesmoke;
+  }
+.box > h3{
+    color:red;
+    position: relative;
+    margin: 20px 0;
+    position: relative;
+}
+.box > h3:before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    background-color: var(--box);
+    height: 3px;
+    width: 100%;
+}
+.box > i{
+    font-size: 35px;
+    background-color: var(--box);
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    border: 2px solid red;
+    padding:2px;
+    animation: rot-ico infinite 3s;
+}
+@keyframes rot-ico{
+    from{
+        transform: rotatey(180deg);
+        opacity: 0.3;
+        box-shadow: 0 0 10px white;
+    }
+    to{
+        scale: 1.1;
+        box-shadow: 0 0 10px white;
+
+    }
+}
+.box > button{
+    border-radius: 20px 0px;
+    background-color:var(--box);
+    text-transform: capitalize;
+    box-shadow: 0px 4px black;
+    font-weight: bold;
+    margin: 20px 0px;
+    color: var(--prime);
+}
+/*machine*/
+.m-team{
+    min-height: 100vh;
+    background: var(--prime);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.m-team > h1{
+    margin-bottom: 30px;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--box);
+}
+.m-team > h1::before{
+    content: "---";
+}
+.m-team > h1::after{
+    content: "---";
+}
+.m-cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.m-cover > .m-pic{
+   width: 300px;
+   height: 300px;
+   background-color:var(--prime);
+   position: relative;
+}
+.m-pic > .mc-txt{
+    transform: translateY(0px);
+    opacity: 0;
+    background: rgba(255, 255,255, 0.5);
+    padding: 6px;
+}
+.m-pic:hover > .mc-txt{
+    transform: translateY(-100px);
+    opacity: 1;
+    transition: all 1s;
+}
+/* project */
+.project{
+    min-height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: var(--prime);
+}
+.project > h1{
+    text-align: center;
+    margin: 20px 0;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--box);
+}
+.project > h1::after{
+    content: "---";
+}
+.project > h1::before{
+    content: "---";
+}
+.project > button{
+     padding: 20px 35px;
+     border-radius: 20px / 20%;
+     border: 1px solid orange;
+     background-color:var(--sec);
+     box-shadow: 0 5px black;
+}
+.project > button > a{
+    text-decoration: none;
+    color:var(--prime);
+}
+.project > button:hover {
+    transition: all 0.5s;
+    transform: translateY(10px);
+    background-color: var(--prime);
+    box-shadow: 0 5px orange;
+}
+.project > .p-cover{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.p-cover > .p-box{
+    width: 350px;
+    height: 400px;
+    background-color:var(--prime);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 0 20px black;
+}
+/* photo */
+.p-box > .p-photo > img{
+    height: 400px;
+}
+/* text */
+.p-box > .p-text{
+   background-color:whitesmoke;
+   text-align: center;
+   padding: 30px;
+   height: 400px;
+   position:absolute;
+   top: 0;
+   transform: translatex(-300px);
+   z-index: -1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: navy;
+   box-shadow:  0 0 10px black white;
+}
+.p-box:hover > .p-text{
+    transform: translatex(0px);
+    transition: all 1s;
+    z-index: 1;
+}
+/* button */
+.p-text > button{
+    padding:5px 20px;
+    border-radius: 30px/10%;
+    box-shadow: 0 3px wheat;
+    color:var(--prime);
+    box-shadow: 0 5px navy;
+    background-color: var(--box);
+}
+.p-text > i{
+    font-size: 35px;
+    background-color: var(--box);
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    border: 2px solid red;
+    padding:2px;
+    margin-bottom: 30px;
+    animation: rot-ico infinite 3s;
+}
+/* review */
+.review{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: var(--prime);
+}
+.review > h1{
+    margin: 30px 0;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--box);
+}
+.review > h1::after{
+    content: "---";
+}
+.review > h1::before{
+    content: "---";
+}
+.review > .r-cover{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+.r-cover > .r-sub{
+    width: 350px;
+    min-height: 350px;
+    border-radius: 50%;
+    background-color: var(--prime);
+    box-shadow: -10px 0px navy inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+.r-sub > p{
+    margin-top: 50px;
+    color: var(--sec);
+}
+.r-sub > .r-img {
+    position: absolute;
+    top:-20px;
+    text-align: center;
+    color: var(--box);
+}
+.r-img > img{
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid navy;
+    height: 100px;
+    padding: 2px;
+}
+/* faq */
+.contact{
+    min-height: 80vh;
+    padding: 20px;
+    background: var(--prime);
+}
+.contact > .c-cover{
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 70vh;
+}
+.c-cover > div{
+    width: 45%;
+    height:500px;
+}
+.quest{
+    color: var(--prime);
+    background-color: navy !important;
+}
+form > input{
+   margin: 20px 0px !important;   
+}
+form > .btn{
+    margin: 20px 0px !important ;
+    background-color: red;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+/* footer */
+footer{
+    background:rgb(43, 42, 42);
+    min-height: 30vh;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    color: white;
+}
+footer > .end{
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   padding: 10px;
+}
+.end > .e-box{
+   width:30%;
+   display: grid;
+   place-content: center;
+}
+.e-box > h3{
+    color: var(--box);
+}
+.e-icon{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.e-icon > i{
+    margin: 10px 0;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.e-icon >i:hover{
+    color: var(--box);
+    text-shadow: 0 0 20px red;
+}
+.e-box1 > a{
+   text-decoration: none;
+   margin: 5px 0;
+   color: var(--prime);
+}
+.e-box1 > a:hover{
+    color:var(--box);
+}
+.e-box3 > p > i{
+    margin-right:5px;
+    font-size: 25px;
+}
+.e-box3 >p:hover{
+    text-decoration: underline;
+    color: var(--box);
+}
+@media only screen and (max-width: 700px){
+    .link-co > label 
+    {
+        font-size: 2rem;
+        display: block;
+    }
+    /* navbar for the mobile */
+    .links{
+        flex-direction: column;
+        position: fixed;
+        top: -240px;
+        right: -200px;
+        height: 50vh;
+        background-color: var(--sec);
+        width:50% ;
+        transform: rotatex(60deg);
+        opacity: 0;
+    }
+     /*home text  */
+     .home{
+        padding: 0px;
+     }
+     .home > .vid-txt{
+        font-size: 15px;
+        left: 0;
+        padding: 15px;
+     }
+     .vid-txt > h1{
+        font-size: 20px;
+     }
+     .vid-txt > a{
+        margin-left: 10px;
+     }
+     /* about */
+     .about > .a-text {
+        width: 90%;
+        padding: 10px; 
+    }
+    .about > div{
+        width: 90%;
+    }
+    /* team box */
+    .team{
+        padding: 10px;
+    }
+    .t-box{
+        padding: 0;
+    }
+    .t-box > .box{
+        padding: 10px;
+        width: 90%;
+        border-radius: 0 0  10px;
+        font-size: 15px;
+    }
+    /* mech */
+    .m-team{
+        padding: 0px;
+    }
+    .m-cover > .m-pic{
+        width: 80%;
+    }
+    /* project */
+    .project{
+        padding: 5px;
+    }
+    .p-cover > .p-box{
+        width: 100%;
+    }
+    .p-box > .p-text{
+        width: 100%;
+        padding: 10px;
+    }
+    /* reviwe */
+    .review > .r-cover{
+        padding: 10px;
+    }
+    .r-cover > .r-sub{
+        width: 100%;
+        border-radius: 30px 0px;
+    }
+    /* faq */
+    .contact{
+        padding: 20px;
+    }
+    .c-cover > div{
+        width: 100%;
+    }
+     /* footer */
+     footer >  .end{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 70px;
+    }
+    .end > .e-box{
+        width: 100%;
+       place-content: start;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width:700px) {
+     /*home text  */
+     .home{
+        padding-top: 60px;
+     }
+     .home > .vid-txt{
+        top: 31%;
+        left: 5%;
+        font-size: 20px;
+     }
+     .vid-txt > h1{
+        font-size: 30px;
+     }
+     /* about */
+     .about{
+        padding: 20px;
+     }
+     .about > div{
+        width: 90%;
+        margin-top: 30px;
+    }
+    /* team */
+    .t-box > .box{
+        width: 90%;
+    }
+    /* project */
+    .p-cover > .p-box{
+        width: 80%;
+    }
+    .p-box > .p-text{
+        width: 100%;
+    }
+    /* footer */
+    footer > .end{
+        gap: 30px;
+    }
+    .end > .e-box{
+        width: 40%;
+    }
+    .e-icon > i{
+        font-size:30px ;
+    }
+}
+
+
+
