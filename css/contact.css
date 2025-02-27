@@ -117,7 +117,6 @@ header{
     justify-content: center;
     align-items: center;
     color: var(--box);
-    opacity: 0.8;
     text-align: center;
 }
 header > .h-txt > h1{
@@ -199,7 +198,7 @@ header > .up{
     bottom:20px;
 }
 .up > a{
-  color: var(--box);
+  color:var(--prime);
 }
 /* footer */
 footer{
@@ -276,6 +275,9 @@ footer > .end{
        /* faq */
        .contact{
         padding: 20px;
+    }
+    header{
+        min-height: 100vh;
     }
     .c-cover > div{
         width: 100%;

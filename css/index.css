@@ -464,8 +464,8 @@ video{
 .project > button:hover {
     transition: all 0.5s;
     transform: translateY(10px);
-    background-color: var(--prime);
-    box-shadow: 0 5px orange;
+    background-color: rgb(120, 32, 32);
+    box-shadow: 0 5px navy;
 }
 .project > .p-cover{
     display: flex;
@@ -706,6 +706,9 @@ footer > .end{
         left: 0;
         padding: 15px;
      }
+     .vid{
+        min-height: 650px;
+     }
      .vid-txt > h1{
         font-size: 20px;
      }
@@ -745,7 +748,7 @@ footer > .end{
         padding: 5px;
     }
     .p-cover > .p-box{
-        width: 100%;
+        width: 85%;
     }
     .p-box > .p-text{
         width: 100%;

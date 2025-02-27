@@ -134,7 +134,6 @@ header{
     justify-content: center;
     align-items: center;
     color: var(--box);
-    opacity: 0.8;
     text-align: center;
 }
 header > .h-txt > h1{
@@ -173,7 +172,7 @@ header > .h-txt > h1{
     bottom:20px;
 }
 .up > a{
-  color: var(--box);
+  color: var(--prime);
 }
 /* project */
 .project{
@@ -272,9 +271,13 @@ header > .h-txt > h1{
 /* review */
 .review{
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     background: var(--prime);
 }
 .review > h1{
+    margin: 20px 0;
     color: red;
     font-family: "Rubik Vinyl", serif;
     font-weight: 400;
@@ -387,6 +390,9 @@ footer > .end{
         font-size: 2rem;
         display: block;
     }
+    header{
+        min-height: 100vh;
+    }
     /* navbar for the mobile */
     .links{
         flex-direction: column;
@@ -404,11 +410,14 @@ footer > .end{
         padding: 5px;
     }
     .p-cover > .p-box{
-        width: 100%;
+        width: 85%;
     }
     .p-box > .p-text{
         width: 100%;
         padding: 10px;
+    }
+    .review > h1::after,.review > h1::before{
+        display: none;
     }
     /* reviwe */
     .review > .r-cover{

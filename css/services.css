@@ -135,7 +135,6 @@ header{
     justify-content: center;
     align-items: center;
     color: var(--box);
-    opacity: 0.8;
     text-align: center;
 }
 header > .h-txt > h1{
@@ -435,6 +434,9 @@ footer > .end{
     {
         font-size: 2rem;
         display: block;
+    }
+    header{
+        min-height: 100vh;
     }
     /* navbar for the mobile */
     .links{
