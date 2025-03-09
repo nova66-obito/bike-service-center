@@ -123,7 +123,7 @@ input:checked~.links{
     right: 0;
     top: 60px;
     opacity: 0.7;
-    transition: all 1s;
+    transition: all 0.5s;
     transform: rotate(0deg);
 }
 /* header */
@@ -320,9 +320,6 @@ header > .h-txt > h1{
   }
   .e-txt > h2{
     color:var(--box);
-  }
-  .e-box2{
-    align-self: flex-end;
   }
   .e-box2 > .e-pho{
     order: 1;
