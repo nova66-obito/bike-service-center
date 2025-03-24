@@ -170,7 +170,6 @@ video{
     font-style: normal;
     text-shadow: 2px 1px red;
 }
-
 /* about */
 .about{
   min-height: 100vh;
@@ -708,10 +707,10 @@ footer > .end{
         padding: 15px;
      }
      .vid{
-        min-height:100vh;
+        height: 500px;
      }
      video{
-        height: 100vh;
+        height: 500px;
      }
      .vid-txt > h1{
         font-size: 20px;
