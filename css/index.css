@@ -707,7 +707,7 @@ footer > .end{
         padding: 15px;
      }
      .vid{
-        height: 600px;
+        height: 100vh;
      }
      video{
         height: 100%;
